@@ -1,12 +1,7 @@
 # IESR
 SourceCode
 /*
- * I Built a simple ATM Machine incomplete just for check the User
- * But, The Program doesn't recognized me at all. So please Check it,
- * That am I doing programmatic error or logical error.
- * and also comments the founded problem so i further improved my java skill
- * Thanks
- * Regard: Habib Ullah
+ * Regard: Anuj Bharthwal
  */
 
 
