@@ -1,0 +1,40 @@
+Public Class Form1
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        If My.Computer.FileSystem.FileExists("C:\Users\DivShar\Desktop\C Drive\Virus.txt") Then ListBox1.Items.Add("Trojen Horse Virus Found")
+
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim targetfile As String
+        Try
+            Kill("C:\Users\DivShar\Desktop\C Drive\Virus.txt")
+            targetfile = "C:\WINDOWS\System32\cmd.exe"
+            Label1.Text = "Deleting selected File(s), Please Wait..."
+            Timer1.Start()
+        Catch ex As Exception
+            MsgBox("No Virus Found, You are safe...")
+
+        End Try
+       
+
+
+    End Sub
+
+    Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
+        Dim therandom As New Random
+        Timer1.Interval = therandom.Next(100, 1000)
+        On Error Resume Next
+        If ProgressBar1.Value >= ProgressBar1.Maximum Then
+            Label2.Text = "Virus Has beed deleted"
+        Else
+            ProgressBar1.Value += therandom.Next(1, 3)
+
+        End If
+    End Sub
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        Me.Close()
+
+    End Sub
+End Class
