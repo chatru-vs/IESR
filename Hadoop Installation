@@ -1,0 +1,46 @@
+or installation press Ctrl+Alt+T or open terminal.
+Type “sudo apt-get install nautilus” and hit enter.
+Type “sudo nautilus” and using it go to the /usr/local it will be located at “computer” drive.
+Extract the pre-configured file.
+Now open the terminal Alt+Ctrl+T and run these commands (Follow instruction of
+sudo apt-get update
+sudo apt install default-jdk
+sudo addgroup hadoop
+sudo adduser --ingroup hadoop hadoop1
+sudo adduser hadoop1 sudo
+sudo apt install openssh-server
+It will ask for the password and press “Y” if asked
+while installation it will asked for “Enter the new value, or press ENTER for the default.
+Just press enter. Give blank for the Name ,Number and phone and press “y”.
+After completion of the commands
+switch to the hadoop1 user by typing “su hadoop1” and enter your password.
+Now run below commands
+ssh-keygen -t rsa -P “”
+cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+ssh localhost
+Enter blank while ssh key passphrase
+After completing the process type “exit”
+Now run the below commands on the terminal
+sudo mkdir -p /usr/local/hadoop_space
+sudo mkdir -p /usr/local/hadoop_space/hdfs/namenode
+sudo mkdir -p /usr/local/hadoop_space/hdfs/datanode
+sudo chown -R hadoop1 /usr/local/
+Fire the Command Jps on the terminal
+Only one thing we need to do the process given below
+Type “sudo nano ~/.bashrc" and at the end of the file paste the below content and save the file by Ctrl+o and Hit Enter and again Hit Enter
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export HADOOP_HOME=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_HOME/bin
+export PATH=$PATH:$HADOOP_HOME/sbin
+export HADOOP_MAPRED_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_HOME
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/native
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_HOME/native"
+Last step is type "source ~/.bashrc" and hit enter
+Now run the hadoop. type “hdfs namenode -format” and hit Enter
+and the magical command and all done. type “start-all.sh”
+type “jps” for checking.
+Now go to the browser and type localhost:50070 and you will see the hadoop screen.Enjoy the hadoop.....
+--Chatrughan Prasad
