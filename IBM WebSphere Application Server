@@ -1,0 +1,44 @@
+--------------------------------------------------------------------------------
+IBM WebSphere Product Installation Status Report
+--------------------------------------------------------------------------------
+
+Report at date and time May 17, 2020 11:40:58 AM UTC
+
+Installation
+--------------------------------------------------------------------------------
+Product Directory        /opt/IBM/WebSphere/AppServer
+Version Directory        /opt/IBM/WebSphere/AppServer/properties/version
+DTD Directory            /opt/IBM/WebSphere/AppServer/properties/version/dtd
+Log Directory            /opt/IBM/WebSphere/AppServerIMData/logs
+
+Product List
+--------------------------------------------------------------------------------
+JAVA8                    installed
+BASE                     installed
+
+Installed Product
+--------------------------------------------------------------------------------
+Name            IBM SDK, Java Technology Edition, Version 8
+Version         8.0.6.10
+ID              JAVA8
+Build Level     pxa6480sr6fp10-20200408_01
+Build Date      04/08/20
+Architecture    x86-64 (64 bit)
+
+Installed Product
+--------------------------------------------------------------------------------
+Name                  IBM WebSphere Application Server
+Version               9.0.5.3
+ID                    BASE
+Build Level           f5032008.04
+Build Date            2/26/20
+Package               com.ibm.websphere.ILAN.v90_9.0.5003.20200226_0941
+Architecture          x86-64 (64 bit)
+Installed Features    WebSphere Application Server traditional
+                      EJBDeploy tool for pre-EJB 3.0 modules
+                      Embeddable EJB container
+                      Stand-alone thin clients and resource adapters
+
+--------------------------------------------------------------------------------
+End Installation Status Report
+------------------------------------
